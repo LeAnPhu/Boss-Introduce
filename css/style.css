@@ -1,0 +1,123 @@
+:root {
+  --mau-chu-dao: #007bff;
+  --mau-nen: #ffffff;
+  --mau-chu: #333333;
+  --mau-xam-nhat: #f4f4f4;
+  --khoang-cach: 20px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --mau-nen: #222222;
+    --mau-chu: #eeeeee;
+    --mau-xam-nhat: #444444;
+    --mau-chu-dao: #4da3ff;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--mau-nen);
+  color: var(--mau-chu);
+  line-height: 1.5;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--khoang-cach);
+  background-color: var(--mau-xam-nhat);
+  border-bottom: 2px solid var(--mau-chu-dao);
+}
+
+.main-nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.main-nav ul li {
+  margin-left: 15px;
+}
+
+.main-nav ul li a {
+  text-decoration: none;
+  color: var(--mau-chu);
+  font-weight: bold;
+}
+
+.main-nav ul li a:hover {
+  color: var(--mau-chu-dao);
+  text-decoration: underline;
+}
+
+main {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.profile-intro {
+  background: linear-gradient(to right, #007bff, #00c6ff);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: var(--khoang-cach);
+  margin-bottom: var(--khoang-cach);
+  border-radius: 10px;
+}
+
+.profile-avatar img {
+  border-radius: 50%;
+  border: 4px solid white;
+
+  animation: dap-nhan 2s infinite alternate;
+}
+
+@keyframes dap-nhan {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: var(--mau-chu-dao);
+  border-bottom: 2px solid var(--mau-chu-dao);
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+table th {
+  background-color: var(--mau-xam-nhat);
+  width: 150px;
+}
+
+.skills-section ul,
+.hobbies-section ul {
+  grid-template-columns: 1fr;
+}
